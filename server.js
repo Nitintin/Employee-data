@@ -2,7 +2,7 @@ const express = require('express')
 const {Employee} =  require('./Data/Employee.js');
 
 console.log('Employee', Employee);
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
 const app = express();
 
