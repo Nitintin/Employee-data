@@ -1,10 +1,12 @@
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
 const {Employee} =  require('./Data/Employee.js');
 
 console.log('Employee', Employee);
 const PORT = process.env.PORT || 5001;
 
 const app = express();
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('API is running...');
